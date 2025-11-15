@@ -1,1 +1,154 @@
 /* your code here */
+body {
+  background: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.product__info {
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid #e3e3e3;
+  padding: 32px 24px 24px 24px;
+  max-width: 400px;
+  margin: 30px auto;
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.06);
+}
+
+.title h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 8px;
+}
+.title span {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.price {
+  color: #fff;
+  background: #7fb800;
+  font-size: 2rem;
+  padding: 12px 24px;
+  border-radius: 10px;
+  margin: 24px 0 12px 0;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.variant h3 {
+  margin: 24px 0 10px 0;
+  font-size: 1.1rem;
+  color: #222
+}
+.variant ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+.variant li {
+  border: 2px solid #dedede;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+.variant li:hover {
+  border: 2px solid #7fb800;
+}
+.variant img {
+  height: 38px;
+  width: 38px;
+  object-fit: contain;
+  display: block;
+}
+
+.description {
+  margin: 25px 0 18px 0;
+}
+.description::before {
+  content: "BENEFITS";
+  display: block;
+  font-weight: bold;
+  color: #7fb800;
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+}
+
+.button-add {
+  display: block;
+  width: 100%;
+  background: #7fb800;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 9px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.button-add:hover {
+  background: #529500;
+}
+
+/* Flex layout for creative main product display */
+.product__photo {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  max-width: 800px;
+  margin: 40px auto 15px auto;
+  align-items: flex-start;
+}
+.photo-container {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.photo-main {
+  background: #e7f9d8;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(127,184,0,0.12);
+}
+.photo-main img {
+  height: 180px;
+  border-radius: 10px;
+}
+.photo-album ul {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.photo-album li img {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #b0b0b0;
+  background: #fff;
+  transition: border .2s;
+}
+.photo-album li img:hover {
+  border: 2px solid #7fb800;
+}
+
+@media (max-width: 768px) {
+  .product__photo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product__info, .photo-container {
+    max-width: 95vw;
+  }
+}
